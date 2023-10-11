@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0C423206-E98B-1D9C-4398-B273A045502E" name="CURSO_HABILITADO">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>58EA7F91-D673-8719-24CE-4B78E5B2148B</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="9FF3467E-D64D-32FC-E287-8BD86716ED4C">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>C91A3E97-EB4E-A1F6-E96E-8683AE3B0FFC</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cupo_max" id="FD1FC427-AE8C-8C6E-2D6B-F07735D1021A">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>3EF34BF5-C15C-8650-F176-9E5A4CAD0568</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="seccion" id="4AC673C8-9FC8-8AE7-A2E8-52B025E7CFDB">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>78C3BDCC-6535-56F7-3525-51A7E1153459</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DOCENTE_dpi" id="89B06ACB-F925-EBAD-4F18-A10D89917E81">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>6024D397-B61C-A31B-2B0C-C4405339EFB3</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6E54C76E-B334-13B0-D688-407BB0AC31E0" referredColumn="C9B68C8A-2B47-4FB2-0714-5AFED0051A33"/>
+</associations>
+</Column>
+<Column name="DOCENTE_siif" id="305FAF2C-92C9-E722-E0C4-B43DD65AAEA5">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>1FF2BD20-128D-CCAF-A453-3C541837E7DF</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6E54C76E-B334-13B0-D688-407BB0AC31E0" referredColumn="4FEF3860-65DB-9686-AD9B-0D9891DB4249"/>
+</associations>
+</Column>
+<Column name="CURSO_codigo" id="FA089B29-9EB8-96EF-20D3-4091FD1EB2F8">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>CC445B4E-D15F-17B5-4CB4-E2BA841244A3</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A5B38505-5EEE-9687-3FE7-5275153929D2" referredColumn="E2F6965A-3483-A0D1-50CA-7625CEC63FEC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4FBAD9E0-FF1B-21C1-CE09-5BB56B6BDB71" name="CURSO_HABILITADO_PK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>201CC109-8632-1E5F-040C-FE613A7679B0</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9FF3467E-D64D-32FC-E287-8BD86716ED4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="309F7C8C-5E94-D862-FEA4-594ACF2A053A" name="CURSO_HABILITADO_CURSO_FK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>E88F7EB5-6B64-C7A0-CD37-69E50EF34E95</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA089B29-9EB8-96EF-20D3-4091FD1EB2F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8C6A830D-42DE-3A53-2C96-2D319B3DA366" name="CURSO_HABILITADO_DOCENTE_FK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>F1629A32-547E-03C2-C872-4CC2AD3B161B</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="89B06ACB-F925-EBAD-4F18-A10D89917E81"/>
+<colUsage columnID="305FAF2C-92C9-E722-E0C4-B43DD65AAEA5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

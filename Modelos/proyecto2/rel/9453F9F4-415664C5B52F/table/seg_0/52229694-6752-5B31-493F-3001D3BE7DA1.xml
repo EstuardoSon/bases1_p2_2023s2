@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="52229694-6752-5B31-493F-3001D3BE7DA1" name="NOTA">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>C52022F3-E22E-CF53-80E4-16BCBFD00F26</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ciclo" id="6F477219-1A69-50AB-371C-E672CF377C24">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>721DDD8E-2D12-3CF0-9C6F-3D10265EBE1C</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="seccion" id="2A19EF1C-0C18-B522-8807-8B0FBD9018DC">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>F4BE0121-B608-6591-2278-1A3C9C48B4EA</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nota" id="791C80F7-617F-5AFF-8742-25402DB9837F">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>087AA850-3111-2677-9643-70FDED731DCB</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>10</dataTypeScale>
+<ownDataTypeParameters>,2,10</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTUDIANTE_carnet" id="1D40163E-DE53-AFD8-BD0B-1DDF6989FC18">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>9256F724-F5E3-6262-1E9A-3A89E7FA48E7</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0775CE03-67D6-FE4B-421C-0EEFE463EE30" referredColumn="DEDB57AA-6D7E-2DF8-455D-A6837E25D5DB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CDDEABD8-6A3F-C29D-89FA-016DEE6D4B61" name="NOTA_PK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>6AF7DB08-416E-AABA-E2CB-387A36C0E029</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F477219-1A69-50AB-371C-E672CF377C24"/>
+<colUsage columnID="2A19EF1C-0C18-B522-8807-8B0FBD9018DC"/>
+<colUsage columnID="1D40163E-DE53-AFD8-BD0B-1DDF6989FC18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="023FF5BE-0679-03E3-7392-B6C51A8D0C60" name="NOTA_ESTUDIANTE_FK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>D75FEE42-8E80-5CDF-4645-FF01B4647A8C</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D40163E-DE53-AFD8-BD0B-1DDF6989FC18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

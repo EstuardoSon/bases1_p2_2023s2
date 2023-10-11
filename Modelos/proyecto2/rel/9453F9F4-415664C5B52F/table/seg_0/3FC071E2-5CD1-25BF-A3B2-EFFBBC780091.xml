@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3FC071E2-5CD1-25BF-A3B2-EFFBBC780091" name="DESASIGNACION">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>47B5B9AC-F03F-7EA9-839B-110CA11CF7E1</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ciclo" id="659E37FA-9BCF-24EB-342E-3412081592A6">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>A2BDD201-D760-6775-7EC9-D9DCDB5A954F</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="seccion" id="0F2C6DAB-7C24-4BE6-5EC6-943FCEBD7F92">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>EFBEF07E-DB4D-1B50-BDF3-1B3BB27D6C8F</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTUDIANTE_carnet" id="189AEA24-7919-C896-2A6B-8B2DC109FCD4">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>DBD29C91-317E-42B8-6DA1-729DCFA39F81</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DADF0E0E-BB06-C17E-052D-B15353344810" referredColumn="DEDB57AA-6D7E-2DF8-455D-A6837E25D5DB"/>
+</associations>
+</Column>
+<Column name="CURSO_codigo" id="BD2E6DD1-4F02-C5E5-4984-2E0A64E82725">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>3442E29C-D100-6E96-8440-92AA067500E4</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8CE22E5F-2767-B884-B70D-D7B2BAD5D48B" referredColumn="E2F6965A-3483-A0D1-50CA-7625CEC63FEC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9BBF06D7-58FB-5FFA-31F6-A4F3EAA97A8E" name="DESASIGNACION_PK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>59599A1F-0A9C-D69A-E42A-63BB4AD1AB17</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F2C6DAB-7C24-4BE6-5EC6-943FCEBD7F92"/>
+<colUsage columnID="659E37FA-9BCF-24EB-342E-3412081592A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FBF3D663-C1F1-E563-510C-7D22121C1BD9" name="DESASIGNACION_CURSO_FK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>413FBB50-527A-FB4C-A87F-4E58F6FCCB00</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BD2E6DD1-4F02-C5E5-4984-2E0A64E82725"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="45EE55CC-7A21-3E1D-1E11-3E2E214A1D09" name="DESASIGNACION_ESTUDIANTE_FK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>D58D2BF7-D4BE-B6B3-8ECA-AF7896D63423</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="189AEA24-7919-C896-2A6B-8B2DC109FCD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

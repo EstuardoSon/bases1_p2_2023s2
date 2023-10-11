@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C52022F3-E22E-CF53-80E4-16BCBFD00F26" name="NOTA">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 19:19:30 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ciclo" id="721DDD8E-2D12-3CF0-9C6F-3D10265EBE1C">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 19:19:43 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="seccion" id="F4BE0121-B608-6591-2278-1A3C9C48B4EA">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 19:20:32 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nota" id="087AA850-3111-2677-9643-70FDED731DCB">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 19:20:44 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>10</dataTypeScale>
+<ownDataTypeParameters>,2,10</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ESTUDIANTE carnet" id="9256F724-F5E3-6262-1E9A-3A89E7FA48E7">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 20:18:51 UTC</createdTime>
+<generatorID>D75FEE42-8E80-5CDF-4645-FF01B4647A8C</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<referedAttribute>6835450B-EFC8-4793-3286-06E4ADB1F6E2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6AF7DB08-416E-AABA-E2CB-387A36C0E029" name="NOTA PK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 19:20:26 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>721DDD8E-2D12-3CF0-9C6F-3D10265EBE1C</attributeRef>
+<attributeRef>F4BE0121-B608-6591-2278-1A3C9C48B4EA</attributeRef>
+<attributeRef>9256F724-F5E3-6262-1E9A-3A89E7FA48E7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

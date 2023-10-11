@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CURSO HABILITADO CURSO FK" directorySegmentName="seg_0" id="E88F7EB5-6B64-C7A0-CD37-69E50EF34E95">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 20:53:27 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<sourcePk>63DAAA98-C39C-174A-7340-92D8D102063E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B92DFD15-4CEC-BD1F-11A0-6BD3F38A0F0D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>58EA7F91-D673-8719-24CE-4B78E5B2148B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

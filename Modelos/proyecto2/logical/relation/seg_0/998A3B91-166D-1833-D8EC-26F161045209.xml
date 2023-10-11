@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CURSO CARRERA FK" directorySegmentName="seg_0" id="998A3B91-166D-1833-D8EC-26F161045209">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 20:12:22 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<sourcePk>72E70098-AC96-2D56-DA66-7848C2B0F93B</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D1B39C9B-6873-7DEC-BDE2-998C33ACE263</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B92DFD15-4CEC-BD1F-11A0-6BD3F38A0F0D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

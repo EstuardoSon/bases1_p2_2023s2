@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ESTUDIANTE CARRERA FK" directorySegmentName="seg_0" id="11B4AD63-A2AF-1F82-A241-4B322916EDA9">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 20:14:39 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<sourcePk>72E70098-AC96-2D56-DA66-7848C2B0F93B</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D1B39C9B-6873-7DEC-BDE2-998C33ACE263</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>98200F3F-5FEA-5FBE-3B58-3F08C853EB72</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

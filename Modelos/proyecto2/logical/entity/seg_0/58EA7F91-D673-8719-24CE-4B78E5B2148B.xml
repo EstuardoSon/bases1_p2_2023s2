@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="58EA7F91-D673-8719-24CE-4B78E5B2148B" name="CURSO HABILITADO">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 18:37:17 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="C91A3E97-EB4E-A1F6-E96E-8683AE3B0FFC">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 18:38:35 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cupo max" id="3EF34BF5-C15C-8650-F176-9E5A4CAD0568">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 18:39:15 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="seccion" id="78C3BDCC-6535-56F7-3525-51A7E1153459">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 18:39:39 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DOCENTE dpi" id="6024D397-B61C-A31B-2B0C-C4405339EFB3">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 20:21:24 UTC</createdTime>
+<generatorID>F1629A32-547E-03C2-C872-4CC2AD3B161B</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<referedAttribute>7B94372F-8D44-701F-8D20-A2EA9C52597C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DOCENTE siif" id="1FF2BD20-128D-CCAF-A453-3C541837E7DF">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 20:21:24 UTC</createdTime>
+<generatorID>F1629A32-547E-03C2-C872-4CC2AD3B161B</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<referedAttribute>1AAE0004-5DBB-C6AF-5145-E63BD5AA34C3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CURSO codigo" id="CC445B4E-D15F-17B5-4CB4-E2BA841244A3">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 20:53:27 UTC</createdTime>
+<generatorID>E88F7EB5-6B64-C7A0-CD37-69E50EF34E95</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<referedAttribute>01F7D6BF-5498-1607-1D2F-A221C3245043</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="201CC109-8632-1E5F-040C-FE613A7679B0" name="CURSO_HABILITADO_PK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 18:38:33 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C91A3E97-EB4E-A1F6-E96E-8683AE3B0FFC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

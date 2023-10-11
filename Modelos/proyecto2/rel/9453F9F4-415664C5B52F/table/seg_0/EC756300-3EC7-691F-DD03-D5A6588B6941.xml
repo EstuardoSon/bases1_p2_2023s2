@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EC756300-3EC7-691F-DD03-D5A6588B6941" name="ASIGNACION">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>112742F1-B64A-9C9F-B025-A364F8D32E1E</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ciclo" id="405984B2-9FE0-ED39-C2AE-6E84752339E8">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>E90BC0B5-6D6A-7812-1498-FC2931ECBD9F</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="seccion" id="BB6400BB-26B0-C830-29E5-15D6DDCFB047">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>C35FB52C-BAD5-0C3F-6957-9D2E102F7BE4</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CURSO_codigo" id="A85EE055-AAB6-B8DB-5DCD-07DE74D776CA">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>45D0C675-EDC7-68A6-7F7A-7AE5A518F1AA</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E6862B7C-BC08-20E8-304A-92B5E6D17170" referredColumn="E2F6965A-3483-A0D1-50CA-7625CEC63FEC"/>
+</associations>
+</Column>
+<Column name="ESTUDIANTE_carnet" id="E9CB997E-F512-39A2-0650-8DE683562481">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>54436A5A-5C9C-BE24-641D-331F778F648F</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8EBDFFF1-278D-F395-E932-57C98F13A15D" referredColumn="DEDB57AA-6D7E-2DF8-455D-A6837E25D5DB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="87594938-848F-63D0-5615-29E2B25097B5" name="ASIGNACION_PK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>8A3838C9-C0B9-FDA5-423B-A1A54B726862</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="405984B2-9FE0-ED39-C2AE-6E84752339E8"/>
+<colUsage columnID="BB6400BB-26B0-C830-29E5-15D6DDCFB047"/>
+<colUsage columnID="A85EE055-AAB6-B8DB-5DCD-07DE74D776CA"/>
+<colUsage columnID="E9CB997E-F512-39A2-0650-8DE683562481"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2923F53E-49BD-E9E0-FC21-1374E1D929E9" name="ASIGNACION_CURSO_FK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>6B686301-EF73-FF57-38F3-4B987C342472</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A85EE055-AAB6-B8DB-5DCD-07DE74D776CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="309965C8-E4B8-8AFF-309E-EBF891275A02" name="ASIGNACION_ESTUDIANTE_FK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 21:09:03 UTC</createdTime>
+<generatorID>7319AE8E-D044-CE67-6C29-86F465DBD2CB</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E9CB997E-F512-39A2-0650-8DE683562481"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

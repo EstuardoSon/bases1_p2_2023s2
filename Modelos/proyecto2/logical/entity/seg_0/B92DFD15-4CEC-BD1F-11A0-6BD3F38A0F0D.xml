@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B92DFD15-4CEC-BD1F-11A0-6BD3F38A0F0D" name="CURSO">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 05:53:08 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="codigo" id="01F7D6BF-5498-1607-1D2F-A221C3245043">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 05:53:17 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="41E8CBC8-559F-DAE5-BB78-CCEF77429B87">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 05:53:38 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="creditos necesarios" id="09205E16-988F-C073-000E-E6A3F4A4FCBB">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 05:54:00 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="creditos otorga" id="5B980749-1C8A-16B6-042A-3E57DFAD056D">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 05:54:26 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="obligatorio" id="BE6DD636-E44E-5818-061B-F17A84FB8DFF">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 05:54:49 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CARRERA id" id="C6612078-E741-7FBF-4E80-6CF084F9A692">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 20:12:22 UTC</createdTime>
+<generatorID>998A3B91-166D-1833-D8EC-26F161045209</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<referedAttribute>46555CFB-94C4-A1E4-B9E5-73D78624260E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="63DAAA98-C39C-174A-7340-92D8D102063E" name="CURSO PK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 05:53:36 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>01F7D6BF-5498-1607-1D2F-A221C3245043</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

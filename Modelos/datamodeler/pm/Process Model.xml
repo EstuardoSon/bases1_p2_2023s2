@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="D9B45BDC-35FE-E6D9-6EFC-F120AAE0452E">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 06:09:00 UTC</createdTime>
-<ownerDesignName>datamodeler</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-</ProcessModel>

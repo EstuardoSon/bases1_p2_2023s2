@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="97222FB0-603B-5C1E-A8F6-99177BECDE74" mainViewID="6CA9A4DD-2057-9C45-7763-4E2CAE9419B5">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 05:01:30 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

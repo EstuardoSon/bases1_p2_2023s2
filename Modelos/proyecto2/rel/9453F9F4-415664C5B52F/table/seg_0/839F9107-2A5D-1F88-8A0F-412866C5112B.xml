@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="839F9107-2A5D-1F88-8A0F-412866C5112B" name="HISTORIAL">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 22:02:36 UTC</createdTime>
+<generatorID>5C4A42BD-6EBA-72AC-33EC-346D0C1A8036</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="6FA09BED-9A23-8AF4-F990-8C80022C4E46">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 22:02:36 UTC</createdTime>
+<generatorID>7BF07055-2E3A-C685-F74C-885AB74F3A27</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha" id="6C2F8ED5-89A6-4256-C51D-428A5E361668">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 22:02:36 UTC</createdTime>
+<generatorID>D4349FDC-E006-D2FB-C9EF-87BD6F35D07B</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="1D159F46-CACC-B2EB-53D3-D6BAE1686BDE">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 22:02:36 UTC</createdTime>
+<generatorID>79D7FFDC-8715-0BFD-965F-6FD046FC4B83</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo" id="7CFFB5AC-E24F-AE04-ADD7-23E91F121179">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 22:02:36 UTC</createdTime>
+<generatorID>61AEB00E-532F-0B43-59ED-50AB35BF7B41</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8BDFA26F-0718-6C93-82C2-8A29FCDA26FF" name="HISTORIAL_PK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 22:02:36 UTC</createdTime>
+<generatorID>EA8A727A-13AC-D043-60E6-072045D9DB73</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6FA09BED-9A23-8AF4-F990-8C80022C4E46"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
