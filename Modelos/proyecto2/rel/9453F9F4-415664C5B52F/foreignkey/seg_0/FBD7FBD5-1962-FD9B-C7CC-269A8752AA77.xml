@@ -1,8 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E6862B7C-BC08-20E8-304A-92B5E6D17170" containerWithKeyObject="EC756300-3EC7-691F-DD03-D5A6588B6941" localFKIndex="2923F53E-49BD-E9E0-FC21-1374E1D929E9" name="ASIGNACION_CURSO_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FBD7FBD5-1962-FD9B-C7CC-269A8752AA77" containerWithKeyObject="EC756300-3EC7-691F-DD03-D5A6588B6941" localFKIndex="88100145-1BB8-B4DD-E493-C7EA6504886A" name="ASIGNACION_CURSO_FK">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 21:09:03 UTC</createdTime>
-<generatorID>6B686301-EF73-FF57-38F3-4B987C342472</generatorID>
+<createdTime>2023-10-11 22:51:53 UTC</createdTime>
+<generatorID>8CBA07C0-4AB8-E0A4-3204-EFD6C29C08D7</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <referredTableLongName>CURSO</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>

@@ -55,10 +55,24 @@
 <dataTypeScale>10</dataTypeScale>
 <ownDataTypeParameters>,2,10</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ESTUDIANTE carnet" id="9256F724-F5E3-6262-1E9A-3A89E7FA48E7">
+<Attribute name="codigo" id="AE50DDA3-F776-BE2B-50E3-83A184662720">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 20:18:51 UTC</createdTime>
-<generatorID>D75FEE42-8E80-5CDF-4645-FF01B4647A8C</generatorID>
+<createdTime>2023-10-11 22:38:00 UTC</createdTime>
+<generatorID>E8DBC7C0-44DF-8DC7-60A3-3C92841761D2</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<referedAttribute>01F7D6BF-5498-1607-1D2F-A221C3245043</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="carnet" id="FB53DDC3-B446-1414-DB7A-B3DCB2035D1E">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 22:39:53 UTC</createdTime>
+<generatorID>AD72B8E2-59B9-C8AE-A0B2-8550F1525794</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <engineerTo>
 <item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
@@ -83,7 +97,6 @@
 <usedAttributes>
 <attributeRef>721DDD8E-2D12-3CF0-9C6F-3D10265EBE1C</attributeRef>
 <attributeRef>F4BE0121-B608-6591-2278-1A3C9C48B4EA</attributeRef>
-<attributeRef>9256F724-F5E3-6262-1E9A-3A89E7FA48E7</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

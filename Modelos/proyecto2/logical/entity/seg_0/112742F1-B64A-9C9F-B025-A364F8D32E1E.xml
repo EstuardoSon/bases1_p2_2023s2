@@ -15,6 +15,18 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="5C6A2585-77D4-453D-B0FD-D5D04FCE61BF">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 22:50:47 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="ciclo" id="E90BC0B5-6D6A-7812-1498-FC2931ECBD9F">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 18:46:41 UTC</createdTime>
@@ -41,29 +53,29 @@
 <dataTypeSize>1 CHAR</dataTypeSize>
 <ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="CURSO codigo" id="45D0C675-EDC7-68A6-7F7A-7AE5A518F1AA">
+<Attribute name="carnet" id="A2C8B579-8103-C521-0E81-DB4395C60946">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 20:17:28 UTC</createdTime>
-<generatorID>6B686301-EF73-FF57-38F3-4B987C342472</generatorID>
-<ownerDesignName>proyecto2</ownerDesignName>
-<engineerTo>
-<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
-</engineerTo>
-<referedAttribute>01F7D6BF-5498-1607-1D2F-A221C3245043</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ESTUDIANTE carnet" id="54436A5A-5C9C-BE24-641D-331F778F648F">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 20:17:40 UTC</createdTime>
-<generatorID>7319AE8E-D044-CE67-6C29-86F465DBD2CB</generatorID>
+<createdTime>2023-10-11 22:51:11 UTC</createdTime>
+<generatorID>0D10F7EC-9290-E95A-49DB-A53BA821951E</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <engineerTo>
 <item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
 </engineerTo>
 <referedAttribute>6835450B-EFC8-4793-3286-06E4ADB1F6E2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="codigo" id="47AE5F06-93BF-9F85-B024-C07F616197EA">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 22:51:17 UTC</createdTime>
+<generatorID>8CBA07C0-4AB8-E0A4-3204-EFD6C29C08D7</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<referedAttribute>01F7D6BF-5498-1607-1D2F-A221C3245043</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -75,16 +87,13 @@
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 19:16:15 UTC</createdTime>
 <ownerDesignName>proyecto2</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="false"/>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>E90BC0B5-6D6A-7812-1498-FC2931ECBD9F</attributeRef>
-<attributeRef>C35FB52C-BAD5-0C3F-6957-9D2E102F7BE4</attributeRef>
-<attributeRef>45D0C675-EDC7-68A6-7F7A-7AE5A518F1AA</attributeRef>
-<attributeRef>54436A5A-5C9C-BE24-641D-331F778F648F</attributeRef>
+<attributeRef>50E9D9AD-12FB-16A6-DDCD-A4324BFC62BA</attributeRef>
+<attributeRef>5C6A2585-77D4-453D-B0FD-D5D04FCE61BF</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

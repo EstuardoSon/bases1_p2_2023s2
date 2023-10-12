@@ -32,10 +32,21 @@
 <ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="CURSO_codigo" id="A85EE055-AAB6-B8DB-5DCD-07DE74D776CA">
+<Column name="id" id="FB8AC084-B196-9862-A105-D792A0C02696">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 21:09:03 UTC</createdTime>
-<generatorID>45D0C675-EDC7-68A6-7F7A-7AE5A518F1AA</generatorID>
+<createdTime>2023-10-11 22:51:53 UTC</createdTime>
+<generatorID>5C6A2585-77D4-453D-B0FD-D5D04FCE61BF</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTUDIANTE_carnet" id="A532231F-66F1-02EE-C33C-31A5C149C51F">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 22:51:53 UTC</createdTime>
+<generatorID>A2C8B579-8103-C521-0E81-DB4395C60946</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -44,13 +55,13 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="E6862B7C-BC08-20E8-304A-92B5E6D17170" referredColumn="E2F6965A-3483-A0D1-50CA-7625CEC63FEC"/>
+<colAssociation fkAssociation="C29AF368-DCF6-B22B-282C-45E45DB9CF86" referredColumn="DEDB57AA-6D7E-2DF8-455D-A6837E25D5DB"/>
 </associations>
 </Column>
-<Column name="ESTUDIANTE_carnet" id="E9CB997E-F512-39A2-0650-8DE683562481">
+<Column name="CURSO_codigo" id="3080C79E-C809-EBF3-5DB6-F29C6797AB0E">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 21:09:03 UTC</createdTime>
-<generatorID>54436A5A-5C9C-BE24-641D-331F778F648F</generatorID>
+<createdTime>2023-10-11 22:51:53 UTC</createdTime>
+<generatorID>47AE5F06-93BF-9F85-B024-C07F616197EA</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -59,7 +70,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="8EBDFFF1-278D-F395-E932-57C98F13A15D" referredColumn="DEDB57AA-6D7E-2DF8-455D-A6837E25D5DB"/>
+<colAssociation fkAssociation="FBD7FBD5-1962-FD9B-C7CC-269A8752AA77" referredColumn="E2F6965A-3483-A0D1-50CA-7625CEC63FEC"/>
 </associations>
 </Column>
 </columns>
@@ -73,32 +84,29 @@
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="405984B2-9FE0-ED39-C2AE-6E84752339E8"/>
-<colUsage columnID="BB6400BB-26B0-C830-29E5-15D6DDCFB047"/>
-<colUsage columnID="A85EE055-AAB6-B8DB-5DCD-07DE74D776CA"/>
-<colUsage columnID="E9CB997E-F512-39A2-0650-8DE683562481"/>
+<colUsage columnID="FB8AC084-B196-9862-A105-D792A0C02696"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="2923F53E-49BD-E9E0-FC21-1374E1D929E9" name="ASIGNACION_CURSO_FK">
+<ind_PK_UK id="B4FFAE07-F711-3156-8288-4C01B40C2144" name="ASIGNACION_ESTUDIANTE_FK">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 21:09:03 UTC</createdTime>
-<generatorID>6B686301-EF73-FF57-38F3-4B987C342472</generatorID>
+<createdTime>2023-10-11 22:51:53 UTC</createdTime>
+<generatorID>0D10F7EC-9290-E95A-49DB-A53BA821951E</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="A85EE055-AAB6-B8DB-5DCD-07DE74D776CA"/>
+<colUsage columnID="A532231F-66F1-02EE-C33C-31A5C149C51F"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="309965C8-E4B8-8AFF-309E-EBF891275A02" name="ASIGNACION_ESTUDIANTE_FK">
+<ind_PK_UK id="88100145-1BB8-B4DD-E493-C7EA6504886A" name="ASIGNACION_CURSO_FK">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 21:09:03 UTC</createdTime>
-<generatorID>7319AE8E-D044-CE67-6C29-86F465DBD2CB</generatorID>
+<createdTime>2023-10-11 22:51:53 UTC</createdTime>
+<generatorID>8CBA07C0-4AB8-E0A4-3204-EFD6C29C08D7</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="E9CB997E-F512-39A2-0650-8DE683562481"/>
+<colUsage columnID="3080C79E-C809-EBF3-5DB6-F29C6797AB0E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

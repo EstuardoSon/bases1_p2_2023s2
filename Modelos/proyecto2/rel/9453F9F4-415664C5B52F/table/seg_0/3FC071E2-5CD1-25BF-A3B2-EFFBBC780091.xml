@@ -62,6 +62,17 @@
 <colAssociation fkAssociation="8CE22E5F-2767-B884-B70D-D7B2BAD5D48B" referredColumn="E2F6965A-3483-A0D1-50CA-7625CEC63FEC"/>
 </associations>
 </Column>
+<Column name="id" id="FE3F8E62-E15E-2406-27B3-6D3EA13FDAA4">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-11 22:51:53 UTC</createdTime>
+<generatorID>59F2C5B6-83BC-7FDE-7947-66260FD60226</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="9BBF06D7-58FB-5FFA-31F6-A4F3EAA97A8E" name="DESASIGNACION_PK">
@@ -73,8 +84,7 @@
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="0F2C6DAB-7C24-4BE6-5EC6-943FCEBD7F92"/>
-<colUsage columnID="659E37FA-9BCF-24EB-342E-3412081592A6"/>
+<colUsage columnID="FE3F8E62-E15E-2406-27B3-6D3EA13FDAA4"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="FBF3D663-C1F1-E563-510C-7D22121C1BD9" name="DESASIGNACION_CURSO_FK">
