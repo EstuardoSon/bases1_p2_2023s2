@@ -1,6 +1,7 @@
 drop database if exists BASES1PRACTICA2;
 create database BASES1PRACTICA2;
 use BASES1PRACTICA2;
+SET SESSION sql_mode='NO_AUTO_VALUE_ON_ZERO';
 
 -- CREACION DE ENTIDIDADES 
 
@@ -13,72 +14,72 @@ tipo varchar(10)
 
 create table CARRERA(
 id int primary key auto_increment,
-nombre varchar(50)
+nombre varchar(50) not null
 );
 
 create table DOCENTE(
-siif int primary key,
-dpi int unique,
-nombres varchar(50),
-apellidos varchar(50),
-fecha_nac date,
-correo varchar(50),
-telefono int,
-direccion varchar(50)
+siif bigint primary key,
+dpi bigint unique not null,
+nombres varchar(50) not null,
+apellidos varchar(50) not null,
+fecha_nac date not null,
+correo varchar(50) not null,
+telefono int not null,
+direccion varchar(50) not null
 );
 
 create table ESTUDIANTE(
-carnet int primary key,
-nombres varchar(50),
-apellidos varchar(50),
-fecha_nac date,
-correo varchar(50),
-telefono int,
-direccion varchar(50),
-dpi int unique,
-carrera int,
+carnet bigint primary key not null,
+nombres varchar(50) not null,
+apellidos varchar(50) not null,
+fecha_nac date not null,
+correo varchar(50) not null,
+telefono int not null,
+direccion varchar(50) not null,
+dpi bigint unique not null,
+carrera int not null,
+fecha_creacion date not null,
+creditos int not null,
 foreign key (carrera) references CARRERA(id)
 );
 
 create table CURSO(
 codigo int primary key,
-nombre varchar(50),
-creditos_necesarios int,
-creditos_otorga int,
-obligatorio boolean,
-carrera int,
+nombre varchar(50) not null,
+creditos_necesarios int not null,
+creditos_otorga int not null,
+obligatorio boolean not null,
+carrera int not null,
 foreign key (carrera) references CARRERA(id)
-);
-
-
-create table ASIGNACION(
-id int,
-ciclo char(2),
-seccion char,
-carnet int,
-curso int,
-foreign key (carnet) references ESTUDIANTE(carnet),
-foreign key (curso) references CURSO(codigo)
-);
-
-create table DESASIGNACION(
-id int,
-ciclo char(2),
-seccion char,
-carnet int,
-curso int,
-foreign key (carnet) references ESTUDIANTE(carnet),
-foreign key (curso) references CURSO(codigo)
 );
 
 create table CURSO_HABILITADO(
 id int primary key auto_increment,
-cupo_max int,
-seccion char,
-docente int,
-curso int,
+ciclo char(2) not null, 
+cupo_max int not null,
+seccion char not null,
+docente bigint not null,
+curso int not null,
+anio int default (year(curdate())),
+asignados int default 0,
 foreign key (docente) references DOCENTE(siif),
 foreign key (curso) references CURSO(codigo)
+);
+
+create table ASIGNACION(
+id int primary key auto_increment,
+carnet bigint not null,
+cursoH int not null,
+foreign key (carnet) references ESTUDIANTE(carnet),
+foreign key (cursoH) references CURSO_HABILITADO(id)
+);
+
+create table DESASIGNACION(
+id int primary key auto_increment,
+carnet bigint not null,
+cursoH int not null,
+foreign key (carnet) references ESTUDIANTE(carnet),
+foreign key (cursoH) references CURSO_HABILITADO(id)
 );
 
 create table ACTA(
@@ -92,24 +93,32 @@ foreign key (curso) references CURSO(codigo)
 
 create table HORARIO(
 id int primary key auto_increment,
-dia int,
-horario varchar(15),
-curso_habilitado int,
+dia int not null,
+horario varchar(15) not null,
+curso_habilitado int not null,
 foreign key (curso_habilitado) references CURSO_HABILITADO(id)
 );
 
-insert into CARRERA(id) values (12.2);
+create table NOTA(
+id int primary key auto_increment,
+ciclo char(2) not null,
+seccion char not null,
+nota float(2) not null,
+carnet bigint not null,
+curso int not null,
+foreign key (carnet) references ESTUDIANTE(carnet),
+foreign key (curso) references CURSO(codigo)
+);
 
-select * from HISTORIAL;
-select * from CARRERA;
-select * from DOCENTE;
-select * from ESTUDIANTE;
-select * from CURSO;
-select * from ASIGNACION;
-select * from DESASIGNACION;
-select * from CURSO_HABILITADO;
-select * from ACTA;
-select * from HORARIO;
+-- select * from HISTORIAL;
+-- select * from CARRERA;
+-- select * from DOCENTE;
+-- select * from ESTUDIANTE;
+-- select * from CURSO;
+-- select * from ASIGNACION;
+-- select * from DESASIGNACION;
+-- select * from CURSO_HABILITADO;
+-- select * from ACTA;
+-- select * from HORARIO;
+-- select * from NOTA;
 
-
--- insert into ASIGNACION values (1,'aa','a',12,12);

@@ -8,30 +8,6 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="ciclo" id="405984B2-9FE0-ED39-C2AE-6E84752339E8">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 21:09:03 UTC</createdTime>
-<generatorID>E90BC0B5-6D6A-7812-1498-FC2931ECBD9F</generatorID>
-<ownerDesignName>proyecto2</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>2 CHAR</dataTypeSize>
-<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="seccion" id="BB6400BB-26B0-C830-29E5-15D6DDCFB047">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 21:09:03 UTC</createdTime>
-<generatorID>C35FB52C-BAD5-0C3F-6957-9D2E102F7BE4</generatorID>
-<ownerDesignName>proyecto2</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>1 CHAR</dataTypeSize>
-<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="id" id="FB8AC084-B196-9862-A105-D792A0C02696">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 22:51:53 UTC</createdTime>
@@ -58,10 +34,10 @@
 <colAssociation fkAssociation="C29AF368-DCF6-B22B-282C-45E45DB9CF86" referredColumn="DEDB57AA-6D7E-2DF8-455D-A6837E25D5DB"/>
 </associations>
 </Column>
-<Column name="CURSO_codigo" id="3080C79E-C809-EBF3-5DB6-F29C6797AB0E">
+<Column name="CURSO_HABILITADO_id" id="3D1537FA-2054-0376-6FF9-37CB3A99148C">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 22:51:53 UTC</createdTime>
-<generatorID>47AE5F06-93BF-9F85-B024-C07F616197EA</generatorID>
+<createdTime>2023-10-13 00:12:25 UTC</createdTime>
+<generatorID>8F5D0653-8996-597E-40F6-6017D695E7FB</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -70,7 +46,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="FBD7FBD5-1962-FD9B-C7CC-269A8752AA77" referredColumn="E2F6965A-3483-A0D1-50CA-7625CEC63FEC"/>
+<colAssociation fkAssociation="1644AFA6-7C59-8B15-D56B-81506BBF9235" referredColumn="9FF3467E-D64D-32FC-E287-8BD86716ED4C"/>
 </associations>
 </Column>
 </columns>
@@ -98,15 +74,15 @@
 <colUsage columnID="A532231F-66F1-02EE-C33C-31A5C149C51F"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="88100145-1BB8-B4DD-E493-C7EA6504886A" name="ASIGNACION_CURSO_FK">
+<ind_PK_UK id="466B20FA-FC2E-744B-284F-A3A0DCD10D77" name="ASIGNACION_CURSO_HABILITADO_FK">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 22:51:53 UTC</createdTime>
-<generatorID>8CBA07C0-4AB8-E0A4-3204-EFD6C29C08D7</generatorID>
+<createdTime>2023-10-13 00:12:25 UTC</createdTime>
+<generatorID>4B361E96-CD25-F12E-6BC5-31706E23F468</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="3080C79E-C809-EBF3-5DB6-F29C6797AB0E"/>
+<colUsage columnID="3D1537FA-2054-0376-6FF9-37CB3A99148C"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

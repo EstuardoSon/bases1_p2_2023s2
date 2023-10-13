@@ -115,6 +115,28 @@
 <colAssociation fkAssociation="17A24A82-278D-F2E8-4332-0924FBBFB7ED" referredColumn="D727C8F6-C758-64AD-30A9-E360E0FFCFC3"/>
 </associations>
 </Column>
+<Column name="fecha_creacion" id="656D48C7-3BD4-C73A-5C18-407A8A95D6FC">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-13 04:36:47 UTC</createdTime>
+<generatorID>C5DBCA3A-3384-2CA4-E965-BD56C846B070</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="creditos" id="BC9D1D03-125C-9112-034F-5555CA0E87D7">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-13 04:36:47 UTC</createdTime>
+<generatorID>D4379C4F-6B93-608B-0DFC-F6DB53B96CC7</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="B82532F6-AEE4-7CB1-063A-290CF2F7CFF8" name="ESTUDIANTE_PK">

@@ -75,6 +75,17 @@
 <colAssociation fkAssociation="FE6C1690-7466-A61E-2E46-B14AFAB2528D" referredColumn="DEDB57AA-6D7E-2DF8-455D-A6837E25D5DB"/>
 </associations>
 </Column>
+<Column name="id" id="ED4CE5A5-6E74-8A87-DC0A-2D895BB8D8CF">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-12 21:19:00 UTC</createdTime>
+<generatorID>CFB8361A-D13D-F63D-A4AB-DCF682F98D4A</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="CDDEABD8-6A3F-C29D-89FA-016DEE6D4B61" name="NOTA_PK">
@@ -86,8 +97,7 @@
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="6F477219-1A69-50AB-371C-E672CF377C24"/>
-<colUsage columnID="2A19EF1C-0C18-B522-8807-8B0FBD9018DC"/>
+<colUsage columnID="ED4CE5A5-6E74-8A87-DC0A-2D895BB8D8CF"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="ACFC7717-1DA8-0B40-AFCC-DE618A07E187" name="NOTA_CURSO_FK">

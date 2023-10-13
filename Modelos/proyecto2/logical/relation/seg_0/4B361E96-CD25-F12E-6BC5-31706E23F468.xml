@@ -1,19 +1,19 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DESASIGNACION CURSO FK" directorySegmentName="seg_0" id="413FBB50-527A-FB4C-A87F-4E58F6FCCB00">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="cursoH_asign" directorySegmentName="seg_0" id="4B361E96-CD25-F12E-6BC5-31706E23F468">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 20:06:19 UTC</createdTime>
+<createdTime>2023-10-13 00:10:53 UTC</createdTime>
 <ownerDesignName>proyecto2</ownerDesignName>
 <engineerTo>
 <item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
 </engineerTo>
-<sourcePk>63DAAA98-C39C-174A-7340-92D8D102063E</sourcePk>
+<sourcePk>201CC109-8632-1E5F-040C-FE613A7679B0</sourcePk>
 <identifying>false</identifying>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>B92DFD15-4CEC-BD1F-11A0-6BD3F38A0F0D</sourceEntity>
+<sourceEntity>58EA7F91-D673-8719-24CE-4B78E5B2148B</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>47B5B9AC-F03F-7EA9-839B-110CA11CF7E1</targetEntity>
+<targetEntity>112742F1-B64A-9C9F-B025-A364F8D32E1E</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>

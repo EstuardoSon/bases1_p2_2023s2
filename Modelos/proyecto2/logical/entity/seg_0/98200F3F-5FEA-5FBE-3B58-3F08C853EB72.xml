@@ -115,6 +115,30 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="fecha_creacion" id="C5DBCA3A-3384-2CA4-E965-BD56C846B070">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-13 04:35:44 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="creditos" id="D4379C4F-6B93-608B-0DFC-F6DB53B96CC7">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-13 04:36:11 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="CARRERA id" id="B978565B-003F-458B-A6A0-99B17F65347D">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 20:14:39 UTC</createdTime>

@@ -87,6 +87,28 @@
 <colAssociation fkAssociation="A5B38505-5EEE-9687-3FE7-5275153929D2" referredColumn="E2F6965A-3483-A0D1-50CA-7625CEC63FEC"/>
 </associations>
 </Column>
+<Column name="year" id="0A62089C-BD2D-67E4-E519-43FB959552CC">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-12 23:56:14 UTC</createdTime>
+<generatorID>2ADE3427-53C4-E44E-5853-92A3B2012DC1</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="asignados" id="041B4A93-49A7-C88E-375B-01F6882F085E">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-12 23:56:14 UTC</createdTime>
+<generatorID>EB43103F-CEB9-E7DC-F0C6-AC9D17CC8DA0</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="4FBAD9E0-FF1B-21C1-CE09-5BB56B6BDB71" name="CURSO_HABILITADO_PK">

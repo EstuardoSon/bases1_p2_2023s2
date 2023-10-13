@@ -27,33 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ciclo" id="E90BC0B5-6D6A-7812-1498-FC2931ECBD9F">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 18:46:41 UTC</createdTime>
-<ownerDesignName>proyecto2</ownerDesignName>
-<engineerTo>
-<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>2 CHAR</dataTypeSize>
-<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="seccion" id="C35FB52C-BAD5-0C3F-6957-9D2E102F7BE4">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 18:48:03 UTC</createdTime>
-<ownerDesignName>proyecto2</ownerDesignName>
-<engineerTo>
-<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>1 CHAR</dataTypeSize>
-<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="carnet" id="A2C8B579-8103-C521-0E81-DB4395C60946">
+<Attribute name="ESTUDIANTE carnet" id="A2C8B579-8103-C521-0E81-DB4395C60946">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 22:51:11 UTC</createdTime>
 <generatorID>0D10F7EC-9290-E95A-49DB-A53BA821951E</generatorID>
@@ -67,15 +41,15 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="codigo" id="47AE5F06-93BF-9F85-B024-C07F616197EA">
+<Attribute name="cursoH" id="8F5D0653-8996-597E-40F6-6017D695E7FB">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 22:51:17 UTC</createdTime>
-<generatorID>8CBA07C0-4AB8-E0A4-3204-EFD6C29C08D7</generatorID>
+<createdTime>2023-10-13 00:10:53 UTC</createdTime>
+<generatorID>4B361E96-CD25-F12E-6BC5-31706E23F468</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <engineerTo>
 <item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
 </engineerTo>
-<referedAttribute>01F7D6BF-5498-1607-1D2F-A221C3245043</referedAttribute>
+<referedAttribute>C91A3E97-EB4E-A1F6-E96E-8683AE3B0FFC</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -87,12 +61,12 @@
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 19:16:15 UTC</createdTime>
 <ownerDesignName>proyecto2</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>50E9D9AD-12FB-16A6-DDCD-A4324BFC62BA</attributeRef>
 <attributeRef>5C6A2585-77D4-453D-B0FD-D5D04FCE61BF</attributeRef>
 </usedAttributes>
 </identifier>

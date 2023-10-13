@@ -27,32 +27,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ciclo" id="A2BDD201-D760-6775-7EC9-D9DCDB5A954F">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 19:15:08 UTC</createdTime>
-<ownerDesignName>proyecto2</ownerDesignName>
-<engineerTo>
-<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>2 CHAR</dataTypeSize>
-<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="seccion" id="EFBEF07E-DB4D-1B50-BDF3-1B3BB27D6C8F">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 19:15:34 UTC</createdTime>
-<ownerDesignName>proyecto2</ownerDesignName>
-<engineerTo>
-<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>1 CHAR</dataTypeSize>
-<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="ESTUDIANTE carnet" id="DBD29C91-317E-42B8-6DA1-729DCFA39F81">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 20:06:04 UTC</createdTime>
@@ -67,15 +41,15 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="CURSO codigo" id="3442E29C-D100-6E96-8440-92AA067500E4">
+<Attribute name="cursoH" id="47947E24-2003-C6A1-CE24-C3EE4FC8CD94">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 20:06:19 UTC</createdTime>
-<generatorID>413FBB50-527A-FB4C-A87F-4E58F6FCCB00</generatorID>
+<createdTime>2023-10-13 00:10:31 UTC</createdTime>
+<generatorID>7D8AB740-7E1A-45D1-F459-5B665027E8C2</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <engineerTo>
 <item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
 </engineerTo>
-<referedAttribute>01F7D6BF-5498-1607-1D2F-A221C3245043</referedAttribute>
+<referedAttribute>C91A3E97-EB4E-A1F6-E96E-8683AE3B0FFC</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>

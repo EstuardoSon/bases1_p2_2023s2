@@ -15,6 +15,18 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="CFB8361A-D13D-F63D-A4AB-DCF682F98D4A">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-12 21:18:16 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="ciclo" id="721DDD8E-2D12-3CF0-9C6F-3D10265EBE1C">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 19:19:43 UTC</createdTime>
@@ -55,7 +67,7 @@
 <dataTypeScale>10</dataTypeScale>
 <ownDataTypeParameters>,2,10</ownDataTypeParameters>
 </Attribute>
-<Attribute name="codigo" id="AE50DDA3-F776-BE2B-50E3-83A184662720">
+<Attribute name="CURSO codigo" id="AE50DDA3-F776-BE2B-50E3-83A184662720">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 22:38:00 UTC</createdTime>
 <generatorID>E8DBC7C0-44DF-8DC7-60A3-3C92841761D2</generatorID>
@@ -69,7 +81,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="carnet" id="FB53DDC3-B446-1414-DB7A-B3DCB2035D1E">
+<Attribute name="ESTUDIANTE carnet" id="FB53DDC3-B446-1414-DB7A-B3DCB2035D1E">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 22:39:53 UTC</createdTime>
 <generatorID>AD72B8E2-59B9-C8AE-A0B2-8550F1525794</generatorID>
@@ -95,8 +107,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>721DDD8E-2D12-3CF0-9C6F-3D10265EBE1C</attributeRef>
-<attributeRef>F4BE0121-B608-6591-2278-1A3C9C48B4EA</attributeRef>
+<attributeRef>CFB8361A-D13D-F63D-A4AB-DCF682F98D4A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
