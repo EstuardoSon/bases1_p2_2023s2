@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="cursoH_asign" directorySegmentName="seg_0" id="4B361E96-CD25-F12E-6BC5-31706E23F468">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ASIGNACION CURSO HABILITADO FK" directorySegmentName="seg_0" id="4B361E96-CD25-F12E-6BC5-31706E23F468">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-13 00:10:53 UTC</createdTime>
 <ownerDesignName>proyecto2</ownerDesignName>

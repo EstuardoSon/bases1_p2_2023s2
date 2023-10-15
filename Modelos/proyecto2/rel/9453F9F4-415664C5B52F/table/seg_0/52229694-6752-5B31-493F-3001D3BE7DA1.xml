@@ -45,21 +45,6 @@
 <ownDataTypeParameters>,2,10</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="CURSO_codigo" id="29EE8612-91B7-114B-6519-8BE790EFBA6E">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 22:38:22 UTC</createdTime>
-<generatorID>AE50DDA3-F776-BE2B-50E3-83A184662720</generatorID>
-<ownerDesignName>proyecto2</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="82DA2AE4-726B-7A07-6C9B-A5A00CB1D7E4" referredColumn="E2F6965A-3483-A0D1-50CA-7625CEC63FEC"/>
-</associations>
-</Column>
 <Column name="ESTUDIANTE_carnet" id="C84BF3C7-7395-4ABA-8FD2-FAE6471816F5">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 22:40:28 UTC</createdTime>
@@ -86,6 +71,32 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="anio" id="1A9BF579-2C9C-2326-BCDF-9051AB622FA2">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-15 00:30:46 UTC</createdTime>
+<generatorID>02895356-787A-B7A2-782E-52B947A3EA40</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CURSO_HABILITADO_id" id="4B1243E2-052B-649D-75D8-07141ADF5204">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-15 01:34:04 UTC</createdTime>
+<generatorID>2361F5CC-7129-3E10-50C0-D9AC0E407F91</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="788A813E-7368-098E-D65D-3923FE1A0C2B" referredColumn="9FF3467E-D64D-32FC-E287-8BD86716ED4C"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="CDDEABD8-6A3F-C29D-89FA-016DEE6D4B61" name="NOTA_PK">
@@ -100,17 +111,6 @@
 <colUsage columnID="ED4CE5A5-6E74-8A87-DC0A-2D895BB8D8CF"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="ACFC7717-1DA8-0B40-AFCC-DE618A07E187" name="NOTA_CURSO_FK">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 22:38:22 UTC</createdTime>
-<generatorID>E8DBC7C0-44DF-8DC7-60A3-3C92841761D2</generatorID>
-<ownerDesignName>proyecto2</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="29EE8612-91B7-114B-6519-8BE790EFBA6E"/>
-</indexColumnUsage>
-</ind_PK_UK>
 <ind_PK_UK id="EA5ED2AD-8242-456D-2C99-57C8A3E35AAD" name="NOTA_ESTUDIANTE_FK">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 22:40:28 UTC</createdTime>
@@ -120,6 +120,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="C84BF3C7-7395-4ABA-8FD2-FAE6471816F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="73B0DAD8-2211-4AC8-5825-F45B32C57DA3" name="NOTA_CURSO_HABILITADO_FK">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-15 01:34:04 UTC</createdTime>
+<generatorID>99A28F92-0655-CFA9-6BF2-84949E7C888D</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4B1243E2-052B-649D-75D8-07141ADF5204"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

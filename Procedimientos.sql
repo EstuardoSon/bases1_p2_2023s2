@@ -64,8 +64,31 @@ end //
 DELIMITER ;
 
 DELIMITER //
+create procedure agregarHorario(in cursoH int, in dia int, in horario varchar(15))
+begin
+	set @idCursoH = null;
+
+	if dia > 7 or dia < 1  then 
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'El dia debe corresponder a un entero entre 1 y 7';
+    end if;
+    
+    select id from CURSO_HABILITADO where id = cursoH into @idCursoH;
+    
+    if @idCursoH is null  then 
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'No existe un curso habilitado dicho ID';
+    end if;
+    
+    insert into HORARIO(dia, horario, curso_habilitado) values (dia, horario, cursoH);
+end //
+DELIMITER ;
+
+DELIMITER //
 create procedure asignarCurso(in curso int, in ciclo char(2), in seccion char, carnet bigint)
 begin
+    set @cursoH = null, @cupo_max = null, @codigo = null, @asignados = null, @nombre = null, @creditos_necesarios = null, @carrera = null, @carreraE = null, @creditos = null, @asignacion = null;
+
     select cursoH.id, cursoH.cupo_max, cursoH.curso, cursoH.asignados, curso.nombre, curso.creditos_necesarios, curso.carrera from CURSO_HABILITADO cursoH
     inner join CURSO curso on curso.codigo = cursoH.curso
     where cursoH.anio = year(curdate()) and cursoH.curso = curso and cursoH.seccion = upper(seccion) and cursoH.ciclo = upper(ciclo)
@@ -76,9 +99,8 @@ begin
     into @carreraE, @creditos;
     
     select asignacion.id from ASIGNACION asignacion
-    inner join CURSO_HABILITADO cursoH on asignacion.cursoH = asignacion.cursoH
+    inner join CURSO_HABILITADO cursoH on cursoH.id = asignacion.cursoH
     where asignacion.carnet = carnet and cursoH.anio = year(curdate()) and cursoH.curso = curso and cursoH.ciclo = upper(ciclo)
-    limit 1
     into @asignacion;
     
     if @cursoH is null then 
@@ -105,7 +127,7 @@ begin
 		SIGNAL SQLSTATE '45000'
 		SET MESSAGE_TEXT = 'La seccion se encuentra llena';
     end if;
-    
+
     if @asignacion is not null then
 		SIGNAL SQLSTATE '45000'
 		SET MESSAGE_TEXT = 'Ya se encuentra asignado a una seccion de este curso este ciclo';
@@ -116,3 +138,92 @@ begin
 end //
 DELIMITER ;
 
+DELIMITER //
+create procedure desasignarCurso(in curso int, in ciclo char(2), in seccion char, carnet bigint)
+begin
+    set @cursoH = null, @asignados = null, @asignacion = null, @desasignacion = null;
+    
+    select asignacion.id from ASIGNACION asignacion
+    inner join CURSO_HABILITADO cursoH on cursoH.id = asignacion.cursoH
+    where asignacion.carnet = carnet and cursoH.anio = year(curdate()) and cursoH.curso = curso and cursoH.ciclo = upper(ciclo) and cursoH.seccion = upper(seccion)
+    into @asignacion;
+    
+    if @asignacion is null then
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'No se encuentra ninguna asignacion con los parametros ingresados';
+    end if;
+    
+    select desasignacion.id from DESASIGNACION desasignacion
+    inner join CURSO_HABILITADO cursoH on cursoH.id = desasignacion.cursoH
+    where desasignacion.carnet = carnet and cursoH.anio = year(curdate()) and cursoH.curso = curso and cursoH.ciclo = upper(ciclo)
+    into @desasignacion;
+    
+    if @desasignacion is not null then
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Ya se encuentra desasignado del curso';
+    end if;
+    
+    select cursoH.id, cursoH.asignados from CURSO_HABILITADO cursoH
+    where cursoH.anio = year(curdate()) and cursoH.curso = curso and cursoH.seccion = upper(seccion) and cursoH.ciclo = upper(ciclo)
+    into @cursoH, @asignados;
+    
+    insert into DESASIGNACION(carnet, cursoH) values (carnet, @cursoH);
+end //
+DELIMITER ;
+
+DELIMITER //
+create procedure ingresarNota(in curso int, in ciclo char(2), in seccion char, carnet bigint, in nota float(2))
+begin
+    set @idCursoH = null, @creditos = null, @idNota = null;
+    
+    select asignacion.cursoH, c.creditos_otorga from ASIGNACION asignacion
+    inner join CURSO_HABILITADO cursoH on cursoH.id = asignacion.cursoH
+    inner join CURSO c on c.codigo = cursoH.curso
+    where cursoH.curso = curso and cursoH.ciclo = ciclo and cursoH.seccion = seccion and cursoH.anio = year(curdate()) and asignacion.carnet = carnet
+    into @idCursoH, @creditos;
+    
+    if @idCursoH is null then
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'No se encuentra una asignacion con los datos ingresados';
+    end if;
+    
+    select nota.id from NOTA nota where nota.carnet = carnet and nota.cursoH = @idCursoH into @idNota;
+    
+    if @idNota is null then
+		insert into NOTA(nota, carnet, cursoH) values (round(nota), carnet, @idCursoH);
+	else
+		update NOTA n set n.nota = round(nota) where n.id = @idNota;
+    end if;
+    
+    if round(nota) >= 61 then
+		update ESTUDIANTE e set e.creditos = (e.creditos + @creditos) where e.carnet = carnet;
+    end if;
+end //
+DELIMITER ;
+
+DELIMITER //
+create procedure generarActa(in curso int, in ciclo char(2), in seccion char)
+begin
+	set @idCursoH = null, @contNota = 0;
+
+    select c.id from CURSO_HABILITADO c where c.curso = curso and c.ciclo = ciclo and c.seccion = seccion and c.anio = year(curdate()) into @idCursoH;
+    
+    if @idCursoH is null then
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'No se encuentra ningun curso con los parametros ingresados';
+    end if;
+    
+    select sum(if(n.nota is null, 1, 0)) from ESTUDIANTE e
+    inner join ASIGNACION a on a.carnet = e.carnet
+    left join NOTA n on n.carnet = e.carnet and n.cursoH = a.cursoH
+    left join DESASIGNACION d on d.carnet = e.carnet and d.cursoH = a.cursoH
+    where a.cursoH = @idCursoH and d.id is null into @contNota;
+    
+    if @contNota > 0 then
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'No se ha ingresado la nota de todos los estudiantes';
+    end if;
+    
+    insert into ACTA(cursoH) values (@idCursoH);
+end //
+DELIMITER ;

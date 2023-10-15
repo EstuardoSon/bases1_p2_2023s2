@@ -115,7 +115,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="fecha_creacion" id="C5DBCA3A-3384-2CA4-E965-BD56C846B070">
+<Attribute name="fecha creacion" id="C5DBCA3A-3384-2CA4-E965-BD56C846B070">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-13 04:35:44 UTC</createdTime>
 <ownerDesignName>proyecto2</ownerDesignName>

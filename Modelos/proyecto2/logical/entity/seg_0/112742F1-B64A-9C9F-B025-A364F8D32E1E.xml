@@ -41,7 +41,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cursoH" id="8F5D0653-8996-597E-40F6-6017D695E7FB">
+<Attribute name="CURSO HABILITADO id" id="8F5D0653-8996-597E-40F6-6017D695E7FB">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-13 00:10:53 UTC</createdTime>
 <generatorID>4B361E96-CD25-F12E-6BC5-31706E23F468</generatorID>

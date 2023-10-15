@@ -67,15 +67,13 @@
 <dataTypeScale>10</dataTypeScale>
 <ownDataTypeParameters>,2,10</ownDataTypeParameters>
 </Attribute>
-<Attribute name="CURSO codigo" id="AE50DDA3-F776-BE2B-50E3-83A184662720">
+<Attribute name="anio" id="02895356-787A-B7A2-782E-52B947A3EA40">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 22:38:00 UTC</createdTime>
-<generatorID>E8DBC7C0-44DF-8DC7-60A3-3C92841761D2</generatorID>
+<createdTime>2023-10-15 00:30:18 UTC</createdTime>
 <ownerDesignName>proyecto2</ownerDesignName>
 <engineerTo>
 <item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
 </engineerTo>
-<referedAttribute>01F7D6BF-5498-1607-1D2F-A221C3245043</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -90,6 +88,20 @@
 <item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
 </engineerTo>
 <referedAttribute>6835450B-EFC8-4793-3286-06E4ADB1F6E2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="2361F5CC-7129-3E10-50C0-D9AC0E407F91">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-15 01:33:28 UTC</createdTime>
+<generatorID>99A28F92-0655-CFA9-6BF2-84949E7C888D</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<referedAttribute>C91A3E97-EB4E-A1F6-E96E-8683AE3B0FFC</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
