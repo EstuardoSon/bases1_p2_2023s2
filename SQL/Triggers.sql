@@ -45,13 +45,6 @@ end //
 DELIMITER ;
 
 DELIMITER //
-create trigger insertarDesasignacion after insert on DESASIGNACION for each row
-begin
-	insert into HISTORIAL(fecha, descripcion, tipo) values (now(), "Se inserto un registro en DESASIGNACION", "INSERT");
-end //
-DELIMITER ;
-
-DELIMITER //
 create trigger insertarCursoH after insert on CURSO_HABILITADO for each row
 begin
 	insert into HISTORIAL(fecha, descripcion, tipo) values (now(), "Se inserto un registro en CURSO_HABILITADO", "INSERT");
@@ -122,13 +115,6 @@ end //
 DELIMITER ;
 
 DELIMITER //
-create trigger eliminarDesasignacion after delete on DESASIGNACION for each row
-begin
-	insert into HISTORIAL(fecha, descripcion, tipo) values (now(), "Se elimino un registro en DESASIGNACION", "DELETE");
-end //
-DELIMITER ;
-
-DELIMITER //
 create trigger eliminarCursoH after delete on CURSO_HABILITADO for each row
 begin
 	insert into HISTORIAL(fecha, descripcion, tipo) values (now(), "Se elimino un registro en CURSO_HABILITADO", "DELETE");
@@ -195,13 +181,6 @@ DELIMITER //
 create trigger modificarAsignacion after update on ASIGNACION for each row
 begin
 	insert into HISTORIAL(fecha, descripcion, tipo) values (now(), "Se modifico un registro en ASIGNACION", "UPDATE");
-end //
-DELIMITER ;
-
-DELIMITER //
-create trigger modificarDesasignacion after update on DESASIGNACION for each row
-begin
-	insert into HISTORIAL(fecha, descripcion, tipo) values (now(), "Se modifico un registro en DESASIGNACION", "UPDATE");
 end //
 DELIMITER ;
 

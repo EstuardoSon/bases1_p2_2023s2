@@ -27,6 +27,19 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="estado" id="ACE5BF12-E5DF-94B7-B4AD-5E2A11346C3E">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-16 03:42:24 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="ESTUDIANTE carnet" id="A2C8B579-8103-C521-0E81-DB4395C60946">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 22:51:11 UTC</createdTime>

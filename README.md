@@ -1,13 +1,13 @@
 # MANUAL TECNICO
 
 ## MODELO CONCEPTUAL
-![Modelo Conceptual](Modelos/ModeloConceptual.png)
+![Modelo Conceptual](Imagenes/ModeloConceptual.png)
 
 ## MODELO LOGICO
-![Modelo Conceptual](Modelos/ModeloLogico.png)
+![Modelo Conceptual](Imagenes/ModeloLogico.png)
 
 ## Normalizacion
 
 
 ## MODELO FISICO
-![Modelo Conceptual](Modelos/ModeloFisico.png)
+![Modelo Conceptual](Imagenes/ModeloFisico.png)

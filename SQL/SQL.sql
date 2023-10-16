@@ -70,14 +70,7 @@ create table ASIGNACION(
 id int primary key auto_increment,
 carnet bigint not null,
 cursoH int not null,
-foreign key (carnet) references ESTUDIANTE(carnet),
-foreign key (cursoH) references CURSO_HABILITADO(id)
-);
-
-create table DESASIGNACION(
-id int primary key auto_increment,
-carnet bigint not null,
-cursoH int not null,
+estado bool not null default 1,
 foreign key (carnet) references ESTUDIANTE(carnet),
 foreign key (cursoH) references CURSO_HABILITADO(id)
 );
@@ -112,7 +105,6 @@ foreign key (cursoH) references CURSO_HABILITADO(id)
 -- select * from ESTUDIANTE;
 -- select * from CURSO;
 -- select * from ASIGNACION;
--- select * from DESASIGNACION;
 -- select * from CURSO_HABILITADO;
 -- select * from ACTA;
 -- select * from HORARIO;

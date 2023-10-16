@@ -1,5 +1,5 @@
 DELIMITER //
-create procedure crearCarrera(nombre varchar(50))
+create procedure crearCarrera(in nombre varchar(50))
 begin
 	if nombre REGEXP '^[a-zA-Z ]+$' then 
     insert into CARRERA(nombre) values (nombre);
@@ -11,7 +11,7 @@ end //
 DELIMITER ;
 
 DELIMITER //
-create procedure registrarEstudiante(in carnet bigint, in nombres varchar(50), in apellidos varchar(50), in fechas_nac date, in correo varchar(50), in telefono int, in direccion varchar(50), in dpi bigint, in carrera int)
+create procedure registrarEstudiante(in carnet bigint, in nombres varchar(50), in apellidos varchar(50), in fecha_nac date, in correo varchar(50), in telefono int, in direccion varchar(50), in dpi bigint, in carrera int)
 begin
 	if correo regexp '^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}$' then 
 		insert into ESTUDIANTE values (carnet, nombres, apellidos, fecha_nac, correo, telefono, direccion, dpi, carrera, curdate(), 0);
@@ -23,7 +23,7 @@ end //
 DELIMITER ;
 
 DELIMITER //
-create procedure registrarDocente(in nombres varchar(50), in apellidos varchar(50), in fechas_nac date, in correo varchar(50), in telefono int, in direccion varchar(50), in dpi bigint, in siif bigint)
+create procedure registrarDocente(in nombres varchar(50), in apellidos varchar(50), in fecha_nac date, in correo varchar(50), in telefono int, in direccion varchar(50), in dpi bigint, in siif bigint)
 begin
 	if correo regexp '^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}$' then 
 		insert into DOCENTE values (siif, dpi, nombres, apellidos, fecha_nac, correo, telefono, direccion);
@@ -143,22 +143,17 @@ create procedure desasignarCurso(in curso int, in ciclo char(2), in seccion char
 begin
     set @cursoH = null, @asignados = null, @asignacion = null, @desasignacion = null;
     
-    select asignacion.id from ASIGNACION asignacion
+    select asignacion.id, asignacion.estado from ASIGNACION asignacion
     inner join CURSO_HABILITADO cursoH on cursoH.id = asignacion.cursoH
     where asignacion.carnet = carnet and cursoH.anio = year(curdate()) and cursoH.curso = curso and cursoH.ciclo = upper(ciclo) and cursoH.seccion = upper(seccion)
-    into @asignacion;
+    into @asignacion, @desasignacion;
     
     if @asignacion is null then
 		SIGNAL SQLSTATE '45000'
 		SET MESSAGE_TEXT = 'No se encuentra ninguna asignacion con los parametros ingresados';
     end if;
     
-    select desasignacion.id from DESASIGNACION desasignacion
-    inner join CURSO_HABILITADO cursoH on cursoH.id = desasignacion.cursoH
-    where desasignacion.carnet = carnet and cursoH.anio = year(curdate()) and cursoH.curso = curso and cursoH.ciclo = upper(ciclo)
-    into @desasignacion;
-    
-    if @desasignacion is not null then
+    if @desasignacion = 0 then
 		SIGNAL SQLSTATE '45000'
 		SET MESSAGE_TEXT = 'Ya se encuentra desasignado del curso';
     end if;
@@ -167,7 +162,8 @@ begin
     where cursoH.anio = year(curdate()) and cursoH.curso = curso and cursoH.seccion = upper(seccion) and cursoH.ciclo = upper(ciclo)
     into @cursoH, @asignados;
     
-    insert into DESASIGNACION(carnet, cursoH) values (carnet, @cursoH);
+    update CURSO_HABILITADO cursoH set cursoH.asignados = (@asignados-1) where cursoH.id = @cursoH;
+    update ASIGNACION asignacion set asignacion.estado = 0 where asignacion.id = @asignacion;
 end //
 DELIMITER ;
 
@@ -179,12 +175,12 @@ begin
     select asignacion.cursoH, c.creditos_otorga from ASIGNACION asignacion
     inner join CURSO_HABILITADO cursoH on cursoH.id = asignacion.cursoH
     inner join CURSO c on c.codigo = cursoH.curso
-    where cursoH.curso = curso and cursoH.ciclo = ciclo and cursoH.seccion = seccion and cursoH.anio = year(curdate()) and asignacion.carnet = carnet
+    where cursoH.curso = curso and cursoH.ciclo = ciclo and cursoH.seccion = seccion and cursoH.anio = year(curdate()) and asignacion.carnet = carnet and asignacion.estado = 1
     into @idCursoH, @creditos;
     
     if @idCursoH is null then
 		SIGNAL SQLSTATE '45000'
-		SET MESSAGE_TEXT = 'No se encuentra una asignacion con los datos ingresados';
+		SET MESSAGE_TEXT = 'No se encuentra una asignacion con los datos ingresados o se ha desasignado';
     end if;
     
     select nota.id from NOTA nota where nota.carnet = carnet and nota.cursoH = @idCursoH into @idNota;
@@ -216,8 +212,7 @@ begin
     select sum(if(n.nota is null, 1, 0)) from ESTUDIANTE e
     inner join ASIGNACION a on a.carnet = e.carnet
     left join NOTA n on n.carnet = e.carnet and n.cursoH = a.cursoH
-    left join DESASIGNACION d on d.carnet = e.carnet and d.cursoH = a.cursoH
-    where a.cursoH = @idCursoH and d.id is null into @contNota;
+    where a.cursoH = @idCursoH and a.estado = 1 into @contNota;
     
     if @contNota > 0 then
 		SIGNAL SQLSTATE '45000'

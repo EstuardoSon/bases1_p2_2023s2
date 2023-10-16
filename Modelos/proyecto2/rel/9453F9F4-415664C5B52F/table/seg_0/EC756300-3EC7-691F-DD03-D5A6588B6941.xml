@@ -49,6 +49,18 @@
 <colAssociation fkAssociation="1644AFA6-7C59-8B15-D56B-81506BBF9235" referredColumn="9FF3467E-D64D-32FC-E287-8BD86716ED4C"/>
 </associations>
 </Column>
+<Column name="estado" id="A4F81851-1C0F-4F99-05A9-A2535BB704AD">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-16 03:43:06 UTC</createdTime>
+<generatorID>ACE5BF12-E5DF-94B7-B4AD-5E2A11346C3E</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="87594938-848F-63D0-5615-29E2B25097B5" name="ASIGNACION_PK">

@@ -8,30 +8,6 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="ciclo" id="6F477219-1A69-50AB-371C-E672CF377C24">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 21:09:03 UTC</createdTime>
-<generatorID>721DDD8E-2D12-3CF0-9C6F-3D10265EBE1C</generatorID>
-<ownerDesignName>proyecto2</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>2 CHAR</dataTypeSize>
-<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="seccion" id="2A19EF1C-0C18-B522-8807-8B0FBD9018DC">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 21:09:03 UTC</createdTime>
-<generatorID>F4BE0121-B608-6591-2278-1A3C9C48B4EA</generatorID>
-<ownerDesignName>proyecto2</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>1 CHAR</dataTypeSize>
-<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="nota" id="791C80F7-617F-5AFF-8742-25402DB9837F">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 21:09:03 UTC</createdTime>
@@ -64,17 +40,6 @@
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-12 21:19:00 UTC</createdTime>
 <generatorID>CFB8361A-D13D-F63D-A4AB-DCF682F98D4A</generatorID>
-<ownerDesignName>proyecto2</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="anio" id="1A9BF579-2C9C-2326-BCDF-9051AB622FA2">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-15 00:30:46 UTC</createdTime>
-<generatorID>02895356-787A-B7A2-782E-52B947A3EA40</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
