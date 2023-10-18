@@ -88,7 +88,8 @@ dia int not null,
 hora_inicio time not null,
 hora_fin time not null,
 curso_habilitado int not null,
-foreign key (curso_habilitado) references CURSO_HABILITADO(id)
+foreign key (curso_habilitado) references CURSO_HABILITADO(id),
+unique (hora_inicio, hora_fin, curso_habilitado)
 );
 
 create table NOTA(

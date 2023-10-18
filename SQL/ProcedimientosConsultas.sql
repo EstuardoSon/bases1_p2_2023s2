@@ -85,6 +85,28 @@ end //
 DELIMITER ;
 
 DELIMITER //
+create procedure consultarAprobacion(in curso int, in ciclo char(2), in anio int, in seccion char)
+begin
+	set @idCursoH = null;
+    
+    select cursoH.id from CURSO_HABILITADO cursoH 
+    where cursoH.curso = curso and cursoH.ciclo = upper(ciclo) and cursoH.anio = anio and cursoH.seccion = upper(seccion) into @idCursoH;
+    
+    if @idCursoH is null then   
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'No existe un curso habilitado con los datos ingresados';
+    end if; 
+    
+    select cursoH.curso as 'Codigo de Curso', a.carnet as 'Carnet', concat(e.nombres," ",e.apellidos) as "Nombre Completo", 
+    if(n.nota < 61 or n.nota is null, 'DESAPROBADO', 'APROBADO') as 'Estado' from ASIGNACION a
+    inner join ESTUDIANTE e on e.carnet = a.carnet
+    inner join CURSO_HABILITADO cursoH on cursoH.id = a.cursoH
+    left join NOTA n on n.asignacion = a.id
+    where a.cursoH = @idCursoH and a.estado = 1;
+end //
+DELIMITER ;
+
+DELIMITER //
 create procedure consultarActas(in curso int)
 begin
 	set @idCH = 0;
@@ -116,7 +138,7 @@ create procedure consultarDesasignacion(in curso int, in ciclo char(2), in anio 
 begin
 	set @idCH = null;
 	select cH.id from CURSO_HABILITADO cH
-    where cH.curso = curso and cH.ciclo = ciclo and cH.anio = anio and cH.seccion = seccion into @idCH;
+    where cH.curso = curso and cH.ciclo = upper(ciclo) and cH.anio = anio and cH.seccion = upper(seccion) into @idCH;
     
     if @idCH is null then   
 		SIGNAL SQLSTATE '45000'
@@ -131,8 +153,7 @@ begin
     cH.anio as Año, cH.asignados as "Cantidad Asignados", sum(if(a.estado = 0,1,0)) as "Cantidad de Desasignados", 
     ((sum(if(a.estado = 0,1,0))/count(a.id)) * 100) as "Porcentaje Desasignacion" from ASIGNACION a
     inner join CURSO_HABILITADO cH on cH.id = a.cursoH
-    inner join NOTA n on n.asignacion = a.id
-    where cH.curso = curso and cH.ciclo = ciclo and cH.anio = anio and cH.seccion = seccion group by cH.id;
+    where cH.id = @idCH group by cH.id;
     
 end //
 DELIMITER ;
