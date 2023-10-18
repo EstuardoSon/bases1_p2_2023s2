@@ -39,7 +39,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="horario" id="4F2E0B63-30D8-7850-2634-7E9381730763">
+<Attribute name="hora_inicio" id="4F2E0B63-30D8-7850-2634-7E9381730763">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 20:36:32 UTC</createdTime>
 <ownerDesignName>proyecto2</ownerDesignName>
@@ -48,9 +48,8 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="CURSO HABILITADO id" id="6F166560-AA7F-2287-26BF-ED55730B4B35">
 <createdBy>sonmu</createdBy>
@@ -64,6 +63,18 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hora_fin" id="29F1AB05-9CA9-E366-6BE1-0F05B98E7022">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-18 01:01:46 UTC</createdTime>
+<ownerDesignName>proyecto2</ownerDesignName>
+<engineerTo>
+<item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

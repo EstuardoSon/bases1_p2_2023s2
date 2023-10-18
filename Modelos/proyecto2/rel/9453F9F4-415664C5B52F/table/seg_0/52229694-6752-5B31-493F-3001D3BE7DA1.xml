@@ -21,21 +21,6 @@
 <ownDataTypeParameters>,2,10</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ESTUDIANTE_carnet" id="C84BF3C7-7395-4ABA-8FD2-FAE6471816F5">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 22:40:28 UTC</createdTime>
-<generatorID>FB53DDC3-B446-1414-DB7A-B3DCB2035D1E</generatorID>
-<ownerDesignName>proyecto2</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="FE6C1690-7466-A61E-2E46-B14AFAB2528D" referredColumn="DEDB57AA-6D7E-2DF8-455D-A6837E25D5DB"/>
-</associations>
-</Column>
 <Column name="id" id="ED4CE5A5-6E74-8A87-DC0A-2D895BB8D8CF">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-12 21:19:00 UTC</createdTime>
@@ -47,10 +32,10 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="CURSO_HABILITADO_id" id="4B1243E2-052B-649D-75D8-07141ADF5204">
+<Column name="ASIGNACION_id" id="7CF7818C-69E6-FA3C-09A7-99121A835A81">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-15 01:34:04 UTC</createdTime>
-<generatorID>2361F5CC-7129-3E10-50C0-D9AC0E407F91</generatorID>
+<createdTime>2023-10-17 18:08:24 UTC</createdTime>
+<generatorID>13F92852-BC3B-EBA1-2170-92819E4C6ABD</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -59,7 +44,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="788A813E-7368-098E-D65D-3923FE1A0C2B" referredColumn="9FF3467E-D64D-32FC-E287-8BD86716ED4C"/>
+<colAssociation fkAssociation="6482ACB6-0840-1D67-256F-FFB4E0E1F38E" referredColumn="FB8AC084-B196-9862-A105-D792A0C02696"/>
 </associations>
 </Column>
 </columns>
@@ -76,26 +61,15 @@
 <colUsage columnID="ED4CE5A5-6E74-8A87-DC0A-2D895BB8D8CF"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="EA5ED2AD-8242-456D-2C99-57C8A3E35AAD" name="NOTA_ESTUDIANTE_FK">
+<ind_PK_UK id="E233FA75-BEE2-6B46-55F4-0730EE62E439" name="NOTA_ASIGNACION_FK">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-11 22:40:28 UTC</createdTime>
-<generatorID>AD72B8E2-59B9-C8AE-A0B2-8550F1525794</generatorID>
+<createdTime>2023-10-17 18:08:24 UTC</createdTime>
+<generatorID>A251FB77-E884-4AB4-185D-94384C24CE8E</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="C84BF3C7-7395-4ABA-8FD2-FAE6471816F5"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="73B0DAD8-2211-4AC8-5825-F45B32C57DA3" name="NOTA_CURSO_HABILITADO_FK">
-<createdBy>sonmu</createdBy>
-<createdTime>2023-10-15 01:34:04 UTC</createdTime>
-<generatorID>99A28F92-0655-CFA9-6BF2-84949E7C888D</generatorID>
-<ownerDesignName>proyecto2</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="4B1243E2-052B-649D-75D8-07141ADF5204"/>
+<colUsage columnID="7CF7818C-69E6-FA3C-09A7-99121A835A81"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

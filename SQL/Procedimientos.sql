@@ -11,10 +11,10 @@ end //
 DELIMITER ;
 
 DELIMITER //
-create procedure registrarEstudiante(in carnet bigint, in nombres varchar(50), in apellidos varchar(50), in fecha_nac date, in correo varchar(50), in telefono int, in direccion varchar(50), in dpi bigint, in carrera int)
+create procedure registrarEstudiante(in carnet bigint, in nombres varchar(50), in apellidos varchar(50), in fecha_nac varchar(10), in correo varchar(50), in telefono int, in direccion varchar(50), in dpi bigint, in carrera int)
 begin
 	if correo regexp '^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}$' then 
-		insert into ESTUDIANTE values (carnet, nombres, apellidos, fecha_nac, correo, telefono, direccion, dpi, carrera, curdate(), 0);
+		insert into ESTUDIANTE values (carnet, nombres, apellidos, DATE_FORMAT(STR_TO_DATE(fecha_nac,'%d-%m-%Y'), '%Y-%m-%d'), correo, telefono, direccion, dpi, carrera, curdate(), 0);
     else
 		SIGNAL SQLSTATE '45000'
 		SET MESSAGE_TEXT = 'El correo no contiene un formato valido';
@@ -23,10 +23,10 @@ end //
 DELIMITER ;
 
 DELIMITER //
-create procedure registrarDocente(in nombres varchar(50), in apellidos varchar(50), in fecha_nac date, in correo varchar(50), in telefono int, in direccion varchar(50), in dpi bigint, in siif bigint)
+create procedure registrarDocente(in nombres varchar(50), in apellidos varchar(50), in fecha_nac varchar(10), in correo varchar(50), in telefono int, in direccion varchar(50), in dpi bigint, in siif bigint)
 begin
 	if correo regexp '^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}$' then 
-		insert into DOCENTE values (siif, dpi, nombres, apellidos, fecha_nac, correo, telefono, direccion);
+		insert into DOCENTE values (siif, dpi, nombres, apellidos, DATE_FORMAT(STR_TO_DATE(fecha_nac,'%d-%m-%Y'), '%Y-%m-%d'), correo, telefono, direccion);
     else
 		SIGNAL SQLSTATE '45000'
 		SET MESSAGE_TEXT = 'El correo no contiene un formato valido';
@@ -79,8 +79,8 @@ begin
 		SIGNAL SQLSTATE '45000'
 		SET MESSAGE_TEXT = 'No existe un curso habilitado dicho ID';
     end if;
-    
-    insert into HORARIO(dia, horario, curso_habilitado) values (dia, horario, cursoH);
+
+    insert into HORARIO(dia, hora_inicio, hora_fin, curso_habilitado) values (dia,SUBSTRING_INDEX(horario, '-', 1),SUBSTRING_INDEX(SUBSTRING_INDEX(horario, '-', 2), '-', -1), cursoH);
 end //
 DELIMITER ;
 
@@ -170,23 +170,23 @@ DELIMITER ;
 DELIMITER //
 create procedure ingresarNota(in curso int, in ciclo char(2), in seccion char, carnet bigint, in nota float(2))
 begin
-    set @idCursoH = null, @creditos = null, @idNota = null;
+    set @idAsignacion = null, @creditos = null, @idNota = null;
     
-    select asignacion.cursoH, c.creditos_otorga from ASIGNACION asignacion
+    select asignacion.id, c.creditos_otorga from ASIGNACION asignacion
     inner join CURSO_HABILITADO cursoH on cursoH.id = asignacion.cursoH
     inner join CURSO c on c.codigo = cursoH.curso
     where cursoH.curso = curso and cursoH.ciclo = ciclo and cursoH.seccion = seccion and cursoH.anio = year(curdate()) and asignacion.carnet = carnet and asignacion.estado = 1
-    into @idCursoH, @creditos;
+    into @idAsignacion, @creditos;
     
-    if @idCursoH is null then
+    if @idAsignacion is null then
 		SIGNAL SQLSTATE '45000'
 		SET MESSAGE_TEXT = 'No se encuentra una asignacion con los datos ingresados o se ha desasignado';
     end if;
     
-    select nota.id from NOTA nota where nota.carnet = carnet and nota.cursoH = @idCursoH into @idNota;
+    select nota.id from NOTA nota where nota.asignacion = @idAsignacion into @idNota;
     
     if @idNota is null then
-		insert into NOTA(nota, carnet, cursoH) values (round(nota), carnet, @idCursoH);
+		insert into NOTA(nota, asignacion) values (round(nota), @idAsignacion);
 	else
 		update NOTA n set n.nota = round(nota) where n.id = @idNota;
     end if;
@@ -211,7 +211,7 @@ begin
     
     select sum(if(n.nota is null, 1, 0)) from ESTUDIANTE e
     inner join ASIGNACION a on a.carnet = e.carnet
-    left join NOTA n on n.carnet = e.carnet and n.cursoH = a.cursoH
+    left join NOTA n on n.asignacion = a.id
     where a.cursoH = @idCursoH and a.estado = 1 into @contNota;
     
     if @contNota > 0 then

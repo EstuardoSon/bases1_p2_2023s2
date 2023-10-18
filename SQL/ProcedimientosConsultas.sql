@@ -104,7 +104,8 @@ begin
     WHEN cH.ciclo = "VD" THEN "VACACIONES DE DICIEMBRE" END) as Ciclo,
     cH.anio as Año, cH.asignados as "Cantidad Asignados", a.fecha_hora as Fecha from ACTA a
     inner join CURSO_HABILITADO cH on ch.id = a.cursoH
-    inner join NOTA n on n.cursoH = cH.id
+    inner join ASIGNACION asi on asi.cursoH = cH.id
+    inner join NOTA n on n.asignacion = asi.id
     where cH.curso = curso group by a.id;
 
 end //
@@ -130,7 +131,7 @@ begin
     cH.anio as Año, cH.asignados as "Cantidad Asignados", sum(if(a.estado = 0,1,0)) as "Cantidad de Desasignados", 
     ((sum(if(a.estado = 0,1,0))/count(a.id)) * 100) as "Porcentaje Desasignacion" from ASIGNACION a
     inner join CURSO_HABILITADO cH on cH.id = a.cursoH
-    inner join NOTA n on n.cursoH = cH.id
+    inner join NOTA n on n.asignacion = a.id
     where cH.curso = curso and cH.ciclo = ciclo and cH.anio = anio and cH.seccion = seccion group by cH.id;
     
 end //

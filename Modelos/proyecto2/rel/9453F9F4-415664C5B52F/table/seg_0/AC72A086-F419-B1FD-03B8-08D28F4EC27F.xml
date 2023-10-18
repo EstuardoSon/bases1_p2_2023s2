@@ -30,16 +30,15 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="horario" id="52D021A4-2173-69ED-3238-1B8CB6FDBAD9">
+<Column name="hora_inicio" id="52D021A4-2173-69ED-3238-1B8CB6FDBAD9">
 <createdBy>sonmu</createdBy>
 <createdTime>2023-10-11 21:09:03 UTC</createdTime>
 <generatorID>4F2E0B63-30D8-7850-2634-7E9381730763</generatorID>
 <ownerDesignName>proyecto2</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="CURSO_HABILITADO_id" id="AD04DEE6-3657-DED0-910E-9B12EF4A1C41">
@@ -56,6 +55,17 @@
 <associations>
 <colAssociation fkAssociation="8D2D7BEA-51D4-E1FF-6038-5911ED8708CD" referredColumn="9FF3467E-D64D-32FC-E287-8BD86716ED4C"/>
 </associations>
+</Column>
+<Column name="hora_fin" id="F2B70163-9EF1-DC33-7435-AECB1FE61530">
+<createdBy>sonmu</createdBy>
+<createdTime>2023-10-18 01:02:45 UTC</createdTime>
+<generatorID>29F1AB05-9CA9-E366-6BE1-0F05B98E7022</generatorID>
+<ownerDesignName>proyecto2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

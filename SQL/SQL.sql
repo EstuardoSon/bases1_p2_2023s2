@@ -85,7 +85,8 @@ foreign key (cursoH) references CURSO_HABILITADO(id)
 create table HORARIO(
 id int primary key auto_increment,
 dia int not null,
-horario varchar(15) not null,
+hora_inicio time not null,
+hora_fin time not null,
 curso_habilitado int not null,
 foreign key (curso_habilitado) references CURSO_HABILITADO(id)
 );
@@ -93,10 +94,8 @@ foreign key (curso_habilitado) references CURSO_HABILITADO(id)
 create table NOTA(
 id int primary key auto_increment,
 nota float(2) not null,
-carnet bigint not null,
-cursoH int not null,
-foreign key (carnet) references ESTUDIANTE(carnet),
-foreign key (cursoH) references CURSO_HABILITADO(id)
+asignacion int,
+foreign key (asignacion) references ASIGNACION(id)
 );
 
 -- select * from HISTORIAL;

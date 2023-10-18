@@ -1,17 +1,17 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="NOTA CURSO HABILITADO FK" directorySegmentName="seg_0" id="99A28F92-0655-CFA9-6BF2-84949E7C888D">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_11" directorySegmentName="seg_0" id="A251FB77-E884-4AB4-185D-94384C24CE8E">
 <createdBy>sonmu</createdBy>
-<createdTime>2023-10-15 01:33:28 UTC</createdTime>
+<createdTime>2023-10-17 18:07:42 UTC</createdTime>
 <ownerDesignName>proyecto2</ownerDesignName>
 <engineerTo>
 <item key="9453F9F4-A37B-C218-2F36-415664C5B52F" value="true"/>
 </engineerTo>
-<sourcePk>201CC109-8632-1E5F-040C-FE613A7679B0</sourcePk>
+<sourcePk>8A3838C9-C0B9-FDA5-423B-A1A54B726862</sourcePk>
 <identifying>false</identifying>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>58EA7F91-D673-8719-24CE-4B78E5B2148B</sourceEntity>
+<sourceEntity>112742F1-B64A-9C9F-B025-A364F8D32E1E</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
 <targetEntity>C52022F3-E22E-CF53-80E4-16BCBFD00F26</targetEntity>
 <transferable>true</transferable>
