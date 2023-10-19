@@ -6,8 +6,5 @@
 ## MODELO LOGICO
 ![Modelo Conceptual](Imagenes/ModeloLogico.png)
 
-## Normalizacion
-
-
 ## MODELO FISICO
 ![Modelo Conceptual](Imagenes/ModeloFisico.png)

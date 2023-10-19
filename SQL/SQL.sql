@@ -62,6 +62,7 @@ docente bigint not null,
 curso int not null,
 anio int default (year(curdate())),
 asignados int default 0,
+unique(ciclo,seccion,curso,anio),
 foreign key (docente) references DOCENTE(siif),
 foreign key (curso) references CURSO(codigo)
 );

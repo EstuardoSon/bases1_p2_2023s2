@@ -1,6 +1,11 @@
 DELIMITER //
 create procedure consultarPensum(in carrera int)
 begin
+	if carrera is null then
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Debe ingresar una carrera obligatoriamente';
+	end if;
+
 	set @idCarrera = null;
 	select c.id from CARRERA c where c.id = carrera into @idCarrera;
     
@@ -17,6 +22,11 @@ DELIMITER //
 create procedure consultarEstudiante(in carnet bigint)
 begin
 	set @carnetE = null;
+    
+    if carnet is null then
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Debe ingresar un carnet obligatoriamente';
+	end if;
     
 	select e.carnet from ESTUDIANTE e where e.carnet = carnet into @carnetE;
     
@@ -38,6 +48,11 @@ create procedure consultarDocente(in siif bigint)
 begin
 	set @siifDocente = null;
     
+    if siif is null then
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Debe ingresar un siif obligatoriamente';
+	end if;
+    
 	select d.siif from DOCENTE d where d.siif = siif into @siifDocente;
     
     if @siifDocente is null then
@@ -56,6 +71,26 @@ DELIMITER //
 create procedure consultarAsignados(in curso int, in ciclo char(2), in anio int, in seccion char)
 begin
 	set @idCH = null;
+    
+    if curso is null then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar un codigo de curso obligatoriamente';
+    end if;
+    if ciclo is null then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar un ciclo de curso obligatoriamente';
+    end if;
+    if seccion is null then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar una seccion obligatoriamente';
+    end if;
+    if anio is null then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar un año obligatoriamente';
+    end if;
+    
+    if seccion not regexp '^[a-zA-Z]$' then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'La seccion debe ser una unica letra';
+    end if;
+	if upper(ciclo) not regexp '^(1S|2S|VJ|VD)$'  then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El ciclo debe ser 1S, 2S, VJ o VD';
+    end if;
     
     select cursoH.id from CURSO_HABILITADO cursoH
     where cursoH.curso = curso and cursoH.ciclo = ciclo and cursoH.seccion = seccion and cursoH.anio = anio into @idCH;
@@ -89,6 +124,26 @@ create procedure consultarAprobacion(in curso int, in ciclo char(2), in anio int
 begin
 	set @idCursoH = null;
     
+    if curso is null then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar un codigo de curso obligatoriamente';
+    end if;
+    if ciclo is null then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar un ciclo de curso obligatoriamente';
+    end if;
+    if seccion is null then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar una seccion obligatoriamente';
+    end if;
+    if anio is null then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar un año obligatoriamente';
+    end if;
+    
+    if seccion not regexp '^[a-zA-Z]$' then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'La seccion debe ser una unica letra';
+    end if;
+	if upper(ciclo) not regexp '^(1S|2S|VJ|VD)$'  then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El ciclo debe ser 1S, 2S, VJ o VD';
+    end if;
+    
     select cursoH.id from CURSO_HABILITADO cursoH 
     where cursoH.curso = curso and cursoH.ciclo = upper(ciclo) and cursoH.anio = anio and cursoH.seccion = upper(seccion) into @idCursoH;
     
@@ -110,6 +165,11 @@ DELIMITER //
 create procedure consultarActas(in curso int)
 begin
 	set @idCH = 0;
+    
+    if curso is null then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar un codigo de curso obligatoriamente';
+    end if;
+    
     select count(cH.curso) from ACTA a
     inner join CURSO_HABILITADO cH on ch.id = a.cursoH
     where cH.curso = curso group by a.id into @idCH;
@@ -137,6 +197,27 @@ DELIMITER //
 create procedure consultarDesasignacion(in curso int, in ciclo char(2), in anio int, in seccion char)
 begin
 	set @idCH = null;
+    
+    if curso is null then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar un codigo de curso obligatoriamente';
+    end if;
+    if ciclo is null then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar un ciclo de curso obligatoriamente';
+    end if;
+    if seccion is null then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar una seccion obligatoriamente';
+    end if;
+    if anio is null then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar un año obligatoriamente';
+    end if;
+    
+    if seccion not regexp '^[a-zA-Z]$' then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'La seccion debe ser una unica letra';
+    end if;
+	if upper(ciclo) not regexp '^(1S|2S|VJ|VD)$'  then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El ciclo debe ser 1S, 2S, VJ o VD';
+    end if;
+    
 	select cH.id from CURSO_HABILITADO cH
     where cH.curso = curso and cH.ciclo = upper(ciclo) and cH.anio = anio and cH.seccion = upper(seccion) into @idCH;
     
