@@ -1,7 +1,7 @@
 DELIMITER //
 create procedure crearCarrera(in nombre varchar(50))
 begin
-	if nombre is null then
+	if nombre is null or nombre  = '' then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar un nombre obligatoriamente';
     end if;
 
@@ -17,10 +17,10 @@ DELIMITER ;
 DELIMITER //
 create procedure registrarEstudiante(in carnet bigint, in nombres varchar(50), in apellidos varchar(50), in fecha_nac varchar(10), in correo varchar(50), in telefono int, in direccion varchar(50), in dpi bigint, in carrera int)
 begin
-	if nombres is null then
+	if nombres is null or nombres = '' then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar sus nombres obligatoriamente';
     end if;
-    if apellidos is null then
+    if apellidos is null or apellidos = '' then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar sus apellidos obligatoriamente';
     end if;
     if fecha_nac is null then
@@ -32,14 +32,14 @@ begin
     if telefono is null then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar su telefono obligatoriamente';
     end if;
-    if direccion is null then
+    if direccion is null or direccion = '' then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar su direccion obligatoriamente';
     end if;
-    if dpi is null then
+    if dpi is null or dpi = 0 then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar su dpi obligatoriamente';
     end if;
     if carrera is null then
-		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar su siif obligatoriamente';
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar su carrera obligatoriamente';
     end if;
     
     if  DATE_FORMAT(STR_TO_DATE(fecha_nac,'%d-%m-%Y'), '%Y-%m-%d') is null then
@@ -58,10 +58,10 @@ DELIMITER ;
 DELIMITER //
 create procedure registrarDocente(in nombres varchar(50), in apellidos varchar(50), in fecha_nac varchar(10), in correo varchar(50), in telefono int, in direccion varchar(50), in dpi bigint, in siif bigint)
 begin
-	if nombres is null then
+	if nombres is null or nombres = '' then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar sus nombres obligatoriamente';
     end if;
-    if apellidos is null then
+    if apellidos is null or apellidos = '' then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar sus apellidos obligatoriamente';
     end if;
     if fecha_nac is null then
@@ -70,16 +70,16 @@ begin
     if correo is null then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar su correo obligatoriamente';
     end if;
-    if telefono is null then
+    if telefono is null or telefono = 0 then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar su telefono obligatoriamente';
     end if;
-    if direccion is null then
+    if direccion is null or direccion = '' then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar su direccion obligatoriamente';
     end if;
-    if dpi is null then
+    if dpi is null or dpi = 0 then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar su dpi obligatoriamente';
     end if;
-    if siif is null then
+    if siif is null or siif = 0 then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar su siif obligatoriamente';
     end if;
     
@@ -99,10 +99,10 @@ DELIMITER ;
 DELIMITER //
 create procedure crearCurso(in codigo int, in nombre varchar(50), in creditos_necesarios int, in creditos_otorga int, in carrera int, in obligatorio bool)
 begin
-	if codigo is null then
+	if codigo is null or codigo = 0 then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar un codigo de curso obligatoriamente';
     end if;
-    if nombre is null then
+    if nombre is null or nombre = '' then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar un nombre de curso obligatoriamente';
     end if;
     if creditos_necesarios is null then
@@ -116,6 +116,10 @@ begin
     end if;
     if obligatorio is null then
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Debe ingresar si el curso es obligatorio obligatoriamente';
+    end if;
+    
+    if obligatorio != 0 and obligatorio != 1 and obligatorio != true and obligatorio != false then
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El valor de obligatorio debe ser FALSO (0) o VERDADERO (1)';
     end if;
     
     if codigo <= 0 then 
